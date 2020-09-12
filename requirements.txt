@@ -4,5 +4,5 @@ pydantic==1.6.1
 uvicorn==0.11.8
 motor==2.2.0
 pydantic[email]
-python-decouple
-email-validator
+python-decouple==3.3
+email-validator==1.1.1
