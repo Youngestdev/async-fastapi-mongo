@@ -2,10 +2,11 @@
 import motor.motor_asyncio
 
 from bson import ObjectId
+from decouple import config
 from app.server.database.database_helper import student_helper
 
 
-MONGO_DETAILS = 'mongodb://localhost:27017'
+MONGO_DETAILS = config('MONGO_DETAILS')
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 
