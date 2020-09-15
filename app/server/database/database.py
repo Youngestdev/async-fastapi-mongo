@@ -2,8 +2,6 @@ import motor.motor_asyncio
 from bson import ObjectId
 from decouple import config
 
-from app.server.database.database_helper import student_helper
-
 MONGO_DETAILS = config('MONGO_DETAILS')
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
@@ -11,6 +9,18 @@ client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 database = client.students
 
 student_collection = database.get_collection('students_collection')
+
+# helpers
+
+def student_helper(student) -> dict:
+    return {
+        "id": str(student["_id"]),
+        "fullname": student["fullname"],
+        "email": student["email"],
+        "course_of_study": student["course_of_study"],
+        "year": student["year"],
+        "GPA": student["gpa"],
+    }
 
 
 async def retrieve_students():

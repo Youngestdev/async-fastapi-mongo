@@ -25,7 +25,7 @@ async def get_student_data(id):
 
 
 @router.post("/", response_description="Student data added into the database")
-async def add_student_data(student: StudentModel = Body(...)):
+async def add_student_data(student: StudentSchema = Body(...)):
     student = jsonable_encoder(student)
     new_student = await add_student(student)
     return ResponseModel(new_student, "Student added successfully.")
