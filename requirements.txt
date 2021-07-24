@@ -1,4 +1,4 @@
-fastapi==0.61.1
+fastapi==0.65.2
 motor==2.2.0
 pydantic[email]
 python-decouple==3.3
