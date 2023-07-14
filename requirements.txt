@@ -1,5 +1,7 @@
-fastapi==0.73.0
-motor==2.5.1
-pydantic[email]
-python-decouple==3.6
-uvicorn==0.17.4
+motor==3.2.0
+uvicorn==0.22.0
+fastapi==0.100.0
+pydantic[email]==2.0.3
+python-decouple==3.8
+
+# Tested on Python 3.11.3
