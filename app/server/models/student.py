@@ -11,7 +11,7 @@ class StudentSchema(BaseModel):
     gpa: float = Field(..., le=4.0)
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "fullname": "John Doe",
                 "email": "jdoe@x.edu.ng",
@@ -30,7 +30,7 @@ class UpdateStudentModel(BaseModel):
     gpa: Optional[float]
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "fullname": "John Doe",
                 "email": "jdoe@x.edu.ng",
