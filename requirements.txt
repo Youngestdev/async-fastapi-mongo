@@ -1,6 +1,6 @@
 motor==3.2.0
 uvicorn==0.22.0
-fastapi==0.100.0
+fastapi==0.109.1
 pydantic[email]==2.0.3
 python-decouple==3.8
 
